@@ -1,2 +1,57 @@
-.settings
+*.settings
+
+##################
+# Custom Ignores #
+##################
+# e.g. bin/custom/catalog/catalogcore/hmc/bin/
+
+
+########################
+# Java generated files #
+########################
+*.class
+*.war
+*.ear
+
+##############################
+# hybris Ant generated files #
+##############################
+gensrc/
+build.xml
+extensioninfo.xsd
+hmc.xsd
+platformhome.properties
+*-testclasses.xml
+beans.xsd
+items.xsd
+classes/
+
+#########################
+# Maven generated files #
+#########################
+target/
+
+######################
+# OS generated files #
+######################
 .DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+
+##############
+# Diff Files #
+##############
+*.orig
+
+###########################
+# Other unnecessary files #
+###########################
+.svn
+
+##############
+# Exceptions #
+##############
+# !xxx.jar
+*catalogcorehmc.jar
