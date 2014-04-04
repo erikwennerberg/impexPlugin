@@ -2,7 +2,7 @@
 <feature
       id="impexFeature"
       label="ImpexFeature"
-      version="1.0.0"
+      version="1.0.2"
       provider-name="erik">
 
    <description url="http://www.example.com/description">
@@ -21,7 +21,7 @@
          id="impexPlugin"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="1.0.2"
          unpack="false"/>
 
 </feature>

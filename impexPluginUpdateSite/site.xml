@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/impexFeature_1.0.0.jar" id="impexFeature" version="1.0.0"/>
+   <feature url="features/impexFeature_1.0.2.jar" id="impexFeature" version="1.0.2"/>
 </site>

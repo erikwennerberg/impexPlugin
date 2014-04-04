@@ -29,10 +29,10 @@ public class ImpexScanner extends RuleBasedScanner {
 		rules[3] = new WordPatternRule(new ImpexWordDetector(), "$", "", variable);
 		//Add separator rules
 		rules[4] = new WordPatternRule(new ImpexSeparatorDetector(), ";", "", separator);
-		rules[5] = new WordPatternRule(new ImpexSeparatorDetector(), "[", "", brackets);
-		rules[6] = new WordPatternRule(new ImpexSeparatorDetector(), "]", "", brackets);
-		rules[7] = new WordPatternRule(new ImpexSeparatorDetector(), "(", "", parenthesis);
-		rules[8] = new WordPatternRule(new ImpexSeparatorDetector(), ")", "", parenthesis);
+		rules[5] = new WordPatternRule(new ImpexBracketDetector(), "[", "", brackets);
+		rules[6] = new WordPatternRule(new ImpexBracketDetector(), "]", "", brackets);
+		rules[7] = new WordPatternRule(new ImpexParenthesisDetector(), "(", "", parenthesis);
+		rules[8] = new WordPatternRule(new ImpexParenthesisDetector(), ")", "", parenthesis);
 		
 		// rule for impex table using regex: (?<=INSERT_UPDATE)\s\w*(?=;)
 		//rules[7]= new RegexRule("(?<=INSERT_UPDATE)\\s\\w*(?=;)", table);
@@ -41,12 +41,12 @@ public class ImpexScanner extends RuleBasedScanner {
 		rules[10] = new WordPatternRule(new ImpexWordDetector(), "UPDATE ", "", table);
 		rules[11] = new WordPatternRule(new ImpexWordDetector(), "REMOVE ", "", table);
 		
-		rules[12] = new WordPatternRule(new ImpexWordDetector(), "processor=", "", modifier);
-		rules[13] = new WordPatternRule(new ImpexWordDetector(), "cacheUnique=", "", modifier);
-		rules[14] = new WordPatternRule(new ImpexWordDetector(), "batchmode=", "", modifier);
-		rules[15] = new WordPatternRule(new ImpexWordDetector(), "default=", "", modifier);
-		rules[16] = new WordPatternRule(new ImpexWordDetector(), "mode=", "", modifier);
-		rules[17] = new WordPatternRule(new ImpexWordDetector(), "unique=", "", modifier);
+		rules[12] = new WordPatternRule(new ImpexWordDetector(), "processor", "", modifier);
+		rules[13] = new WordPatternRule(new ImpexWordDetector(), "cacheUnique", "", modifier);
+		rules[14] = new WordPatternRule(new ImpexWordDetector(), "batchmode", "", modifier);
+		rules[15] = new WordPatternRule(new ImpexWordDetector(), "default", "", modifier);
+		rules[16] = new WordPatternRule(new ImpexWordDetector(), "mode", "", modifier);
+		rules[17] = new WordPatternRule(new ImpexWordDetector(), "unique", "", modifier);
 		
 		setRules(rules);
 	}
